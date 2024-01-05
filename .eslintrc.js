@@ -9,13 +9,18 @@ module.exports = {
     },
   },
   settings: {
-    react: {
+    'react': {
       version: 'detect',
     },
     'import/resolver': {
       node: {
         paths: ['src'],
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        extensions: [
+          '.js',
+          '.jsx',
+          '.ts',
+          '.tsx',
+        ],
       },
     },
   },
@@ -29,11 +34,13 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
-    'plugin:prettier/recommended', // Make sure this is always the last element in the array.
+    'plugin:@stylistic/recommended-extends',
   ],
-  plugins: ['simple-import-sort', 'prettier'],
+  plugins: [
+    'simple-import-sort',
+    '@stylistic',
+  ],
   rules: {
-    'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/accessible-emoji': 'off',
     'react/prop-types': 'off',
@@ -44,9 +51,23 @@ module.exports = {
       'error',
       {
         components: ['Link'],
-        specialLink: ['hrefLeft', 'hrefRight'],
-        aspects: ['invalidHref', 'preferButton'],
+        specialLink: [
+          'hrefLeft',
+          'hrefRight',
+        ],
+        aspects: [
+          'invalidHref',
+          'preferButton',
+        ],
+      },
+    ],
+    '@stylistic/padding-line-between-statements': [
+      'error',
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: ['interface', 'type'],
       },
     ],
   },
-};
+}
