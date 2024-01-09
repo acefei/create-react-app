@@ -6,7 +6,7 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "lint": "eslint --fix . --ext js,jsx,ts,tsx",
-    "prepare": "husky install",
+    "prepare": "echo \"pre-commit start\" && exit 0",
     "type-check": "tsc"
   },
   "dependencies": {
@@ -30,6 +30,10 @@
     "typescript": "^5.3.3",
     "vite": "^5.0.10"
   },
-  "pre-commit": "lint",
+  "pre-commit": [
+    "prepare",
+    "lint"
+
+  ],
   "license": "MIT"
 }
