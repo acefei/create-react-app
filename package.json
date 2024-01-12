@@ -1,14 +1,19 @@
 {
   "name": "create-react-app",
   "version": "0.0.0",
+  "license": "MIT",
   "scripts": {
-    "dev": "vite --host",
     "build": "tsc && vite build",
-    "serve": "vite preview",
-    "lint": "eslint --fix . --ext js,jsx,ts,tsx",
+    "dev": "vite --host",
+    "lint": "eslint --fix . --ext js,jsx,ts,tsx,json,rc",
     "prepare": "echo \"pre-commit start\" && exit 0",
+    "serve": "vite preview",
     "type-check": "tsc"
   },
+  "pre-commit": [
+    "prepare",
+    "lint"
+  ],
   "dependencies": {
     "jotai": "^2.6.1",
     "react": "^18.2.0",
@@ -24,16 +29,12 @@
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.56.0",
     "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-json-format": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-prefer-arrow-functions": "^3.2.4",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.10"
-  },
-  "pre-commit": [
-    "prepare",
-    "lint"
-
-  ],
-  "license": "MIT"
+  }
 }

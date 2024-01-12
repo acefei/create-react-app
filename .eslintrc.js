@@ -31,16 +31,19 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:jsx-a11y/recommended',
+    'plugin:@typescript-eslint/recommended',
     'plugin:@stylistic/recommended-extends',
   ],
   plugins: [
+    'json-format',
+    'prefer-arrow-functions',
     'simple-import-sort',
     '@stylistic',
   ],
   rules: {
+    'prefer-arrow-functions/prefer-arrow-functions': 'error',
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/accessible-emoji': 'off',
     'react/prop-types': 'off',

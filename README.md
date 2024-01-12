@@ -6,8 +6,6 @@ Set up a modern web app by running one command.
 ## Get started in seconds
 ```
 npx degit acefei/create-react-app my-app
-# or
-pnpm dlx degit acefei/create-react-app my-app
 ```
 
 
@@ -15,8 +13,6 @@ pnpm dlx degit acefei/create-react-app my-app
 Upgrade package.json dependencies to the latest versions
 ```
 npx npm-check-updates -u
-# or
-pnpm dlx npm-check-updates -u
 ```
 
 
@@ -25,5 +21,5 @@ pnpm dlx npm-check-updates -u
 - [React](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
 - [Eslint](https://eslint.org/)
-- [Prettier](https://prettier.io/)
+- [@stylistic/eslint-plugin](https://eslint.style/packages/default/)
 - [@fastify/pre-commit](https://www.npmjs.com/package/@fastify/pre-commit)

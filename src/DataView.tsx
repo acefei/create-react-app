@@ -4,7 +4,7 @@ import { useEffect } from 'react'
 import { dataAtom } from './store'
 import { fetchData } from './utils'
 
-export default function AsyncDataView() {
+const AsyncDataView = () => {
   console.log('Render AsyncDataView')
 
   const [data, setData] = useAtom(dataAtom)
@@ -17,3 +17,5 @@ export default function AsyncDataView() {
 
   return <h1>{`Pools: ${data?.pools?.length}`}</h1>
 }
+
+export default AsyncDataView

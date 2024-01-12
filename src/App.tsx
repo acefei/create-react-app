@@ -5,12 +5,12 @@ import { Suspense } from 'react'
 
 import AsyncDataView from './DataView'
 
-export default function App() {
-  return (
-    <Provider>
-      <Suspense fallback={<p>Loading data...</p>}>
-        <AsyncDataView />
-      </Suspense>
-    </Provider>
-  )
-}
+const App = () => (
+  <Provider>
+    <Suspense fallback={<p>Loading data...</p>}>
+      <AsyncDataView />
+    </Suspense>
+  </Provider>
+)
+
+export default App
