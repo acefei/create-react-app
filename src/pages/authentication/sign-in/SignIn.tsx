@@ -46,7 +46,7 @@ const SignUp = () => {
 							<span>Password</span>
 							<a style={{ float: "right" }}>Forgot password?</a>
 						</Form.ControlLabel>
-						<Form.Control name="name" type="password" />
+						<Form.Control name="password" type="password" />
 					</Form.Group>
 					<Form.Group>
 						<Stack spacing={6} divider={<Divider vertical />}>
