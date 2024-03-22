@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
+    // Fixed Property 'env' does not exist on type 'ImportMeta'.ts(2339)
     "types": ["vite/client"],
     "useDefineForClassFields": true,
     "lib": [
