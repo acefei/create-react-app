@@ -1,5 +1,4 @@
 # Create React App
-
 Set up a modern web app by running one command.
 
 
@@ -17,9 +16,11 @@ npx npm-check-updates -u
 
 
 ## Dependencies
+- [React](https://reactjs.org)
+- [Rsuite](https://github.com/rsuite/rsuite)
+- [Jotai](https://jotai.org)
 - [Vite](https://github.com/vitejs/vite)
-- [React](https://reactjs.org/)
-- [Typescript](https://www.typescriptlang.org/)
-- [Eslint](https://eslint.org/)
-- [@stylistic/eslint-plugin](https://eslint.style/packages/default/)
+- [Typescript](https://www.typescriptlang.org)
+- [Eslint](https://eslint.org)
+- [@stylistic/eslint-plugin](https://eslint.style/packages/default)
 - [@fastify/pre-commit](https://www.npmjs.com/package/@fastify/pre-commit)

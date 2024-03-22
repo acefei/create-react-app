@@ -1,7 +1,17 @@
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import alias from "@rollup/plugin-alias";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+	plugins: [
+		react(),
+		// recognize the '@' alias by @rollup/plugin-alias package
+		alias({
+			entries: [
+				{ find: "@",
+					replacement: "/src" }
+			]
+		})
+	]
+	// ...other configurations
+});
